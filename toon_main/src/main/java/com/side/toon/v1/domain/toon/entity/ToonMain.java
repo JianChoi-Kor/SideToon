@@ -8,11 +8,11 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.util.List;
 
-@Table(name = "toon_title")
+@Table(name = "toon_main")
 @Setter
 @NoArgsConstructor
 @Entity
-public class ToonTitle extends CreateDate {
+public class ToonMain extends CreateDate {
 
     /**
      * 고유값
@@ -32,24 +32,24 @@ public class ToonTitle extends CreateDate {
     /**
      * 웹툰 제목
      */
-    @Column(name = "title", nullable = false)
-    private String title;
+    @Column(name = "toon_title", nullable = false)
+    private String toonTitle;
 
     /**
      * 웹툰 설명
      */
-    @Column(name = "info", nullable = false)
-    private String info;
+    @Column(name = "toon_info", nullable = false)
+    private String toonInfo;
 
     /**
      * 웹툰 작가
      */
-    @Column(name = "writer", nullable = false)
-    private String writer;
+    @Column(name = "toon_writer", nullable = false)
+    private String toonWriter;
 
     /**
      * 회차별 웹툰 정보
      */
-    @OneToMany(mappedBy = "toon_title", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "toonMain", fetch = FetchType.LAZY)
     private List<ToonContent> toonContents;
 }

@@ -20,11 +20,15 @@ public class ToonContent extends CreateDateAndUpdateDate {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idx;
 
+    @ManyToOne
+    @JoinColumn(name = "toon_main_idx", referencedColumnName = "idx")
+    private ToonMain toonMain;
+
     /**
      * 회차별 제목
      */
-    @Column(name = "title")
-    private String title;
+    @Column(name = "content_title")
+    private String contentTitle;
 
     /**
      * 이미지의 그룹 대표 고유값
