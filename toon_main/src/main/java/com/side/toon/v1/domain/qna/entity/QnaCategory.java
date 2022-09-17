@@ -1,15 +1,15 @@
-package com.side.toon.v1.domain.qna;
+package com.side.toon.v1.domain.qna.entity;
 
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
-@Table(name = "qna")
+@Table(name = "qna_category")
 @Setter
 @NoArgsConstructor
 @Entity
-public class Qna {
+public class QnaCategory {
 
     /**
      * 고유값
