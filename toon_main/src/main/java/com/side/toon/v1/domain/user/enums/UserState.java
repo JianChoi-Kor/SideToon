@@ -1,10 +1,10 @@
 package com.side.toon.v1.domain.user.enums;
 
-import com.side.toon.v1.lib.enums.LegacyCommonType;
+import com.side.toon.v1.lib.enums.EnumMapperType;
 import lombok.Getter;
 
 @Getter
-public enum UserState implements LegacyCommonType {
+public enum UserState implements EnumMapperType {
 
     NORMAL("정상", 1),
     UNCERTIFIED("미인증", 2),
@@ -20,5 +20,9 @@ public enum UserState implements LegacyCommonType {
         this.legacyCode = legacyCode;
     }
 
-
+    //@Getter 어노테이션이 적용되지 않는 getCode() 메서드 @Override
+    @Override
+    public String getCode() {
+        return name();
+    }
 }
