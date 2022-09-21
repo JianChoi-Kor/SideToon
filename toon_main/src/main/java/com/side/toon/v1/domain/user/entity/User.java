@@ -36,6 +36,7 @@ public class User {
      * 회원 등급
      */
     @Column(name = "grade", nullable = false)
+    @Convert(converter = UserGrade.UserGradeConverter.class)
     private UserGrade grade;
 
     /**
