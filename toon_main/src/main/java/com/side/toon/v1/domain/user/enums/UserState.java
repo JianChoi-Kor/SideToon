@@ -1,6 +1,7 @@
 package com.side.toon.v1.domain.user.enums;
 
 import com.side.toon.v1.lib.enums.EnumMapperType;
+import com.side.toon.v1.lib.enums.LegacyCodeConverter;
 import lombok.Getter;
 
 @Getter
@@ -24,5 +25,13 @@ public enum UserState implements EnumMapperType {
     @Override
     public String getCode() {
         return name();
+    }
+
+    public static class UserStateConverter extends LegacyCodeConverter<UserState> {
+        private static final String ENUM_NAME = "사용자 상태";
+
+        public UserStateConverter() {
+            super(false, ENUM_NAME);
+        }
     }
 }

@@ -67,5 +67,6 @@ public class UserInfo extends CreateDateAndUpdateDate {
      * 회원 상태
      */
     @Column(name = "state")
+    @Convert(converter = UserState.UserStateConverter.class)
     private UserState state;
 }
