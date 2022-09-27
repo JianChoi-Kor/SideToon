@@ -1,14 +1,15 @@
 package com.side.toon.v1.domain.user.entity;
 
 import com.side.toon.v1.domain.user.enums.UserGrade;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Table(name = "user")
-@Setter
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor
+@Getter
 @Entity
 public class User {
 

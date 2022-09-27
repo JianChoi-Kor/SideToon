@@ -21,7 +21,8 @@ public abstract class LegacyCodeConverter<E extends Enum<E> & EnumMapperType> im
      */
     private String enumName;
 
-    public LegacyCodeConverter(boolean nullable, String enumName) {
+    public LegacyCodeConverter(Class<E> targetEnumClass, boolean nullable, String enumName) {
+        this.targetEnumClass = targetEnumClass;
         this.nullable = nullable;
         this.enumName = enumName;
     }

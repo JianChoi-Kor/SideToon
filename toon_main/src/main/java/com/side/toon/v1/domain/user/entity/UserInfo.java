@@ -2,14 +2,18 @@ package com.side.toon.v1.domain.user.entity;
 
 import com.side.toon.v1.domain.user.enums.UserState;
 import com.side.toon.v1.lib.entity.CreateDateAndUpdateDate;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
 
 @Table(name = "user_info")
-@Setter
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor
+@Getter
 @Entity
 public class UserInfo extends CreateDateAndUpdateDate {
 

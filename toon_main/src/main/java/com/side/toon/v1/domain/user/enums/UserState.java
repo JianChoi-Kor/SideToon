@@ -31,7 +31,7 @@ public enum UserState implements EnumMapperType {
         private static final String ENUM_NAME = "사용자 상태";
 
         public UserStateConverter() {
-            super(false, ENUM_NAME);
+            super(UserState.class, false, ENUM_NAME);
         }
     }
 }

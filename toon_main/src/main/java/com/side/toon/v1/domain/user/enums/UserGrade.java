@@ -31,7 +31,7 @@ public enum UserGrade implements EnumMapperType {
         private static final String ENUM_NAME = "사용자 등급";
 
         public UserGradeConverter() {
-            super(false, ENUM_NAME);
+            super(UserGrade.class, false, ENUM_NAME);
         }
     }
 }
