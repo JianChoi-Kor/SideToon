@@ -1,6 +1,6 @@
 package com.side.toon.domain.toon;
 
-import com.side.toon.v1.lib.entity.CreateDateAndUpdateDate;
+import com.side.toon.lib.entity.CreateDateAndUpdateDate;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
@@ -20,6 +20,9 @@ public class ToonContent extends CreateDateAndUpdateDate {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idx;
 
+    /**
+     * 메인 웹툰
+     */
     @ManyToOne
     @JoinColumn(name = "toon_main_idx", referencedColumnName = "idx")
     private ToonMain toonMain;
@@ -47,4 +50,16 @@ public class ToonContent extends CreateDateAndUpdateDate {
      */
     @Column(name = "free_option")
     private boolean freeOption;
+
+    /**
+     * 노출 여부
+     */
+    @Column(name = "exposure", nullable = false)
+    private boolean exposure;
+
+    /**
+     * 삭제 여부
+     */
+    @Column(name = "use_at", nullable = false)
+    private boolean useAt;
 }

@@ -1,7 +1,6 @@
 package com.side.toon.domain.user;
 
-import com.side.toon.v1.domain.user.enums.UserState;
-import com.side.toon.v1.lib.entity.CreateDateAndUpdateDate;
+import com.side.toon.lib.entity.CreateDateAndUpdateDate;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -26,10 +25,10 @@ public class UserInfo extends CreateDateAndUpdateDate {
     private Long idx;
 
     /**
-     * 사용자 고유값
+     * 사용자
      */
-    @Column(name = "user_idx", nullable = false)
-    private Long userIdx;
+    @OneToOne(mappedBy = "userInfo")
+    private User user;
 
     /**
      * 파일 고유값 (프로필 이미지)

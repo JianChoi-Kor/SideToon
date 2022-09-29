@@ -1,7 +1,7 @@
 package com.side.toon.domain.toon;
 
 
-import com.side.toon.v1.lib.entity.CreateDate;
+import com.side.toon.lib.entity.CreateDate;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
@@ -51,5 +51,18 @@ public class ToonMain extends CreateDate {
      * 회차별 웹툰 정보
      */
     @OneToMany(mappedBy = "toonMain", fetch = FetchType.LAZY)
+    @JoinColumn(name = "toon_main_idx", referencedColumnName = "idx")
     private List<ToonContent> toonContents;
+
+    /**
+     * 노출 여부
+     */
+    @Column(name = "exposure", nullable = false)
+    private boolean exposure;
+
+    /**
+     * 삭제 여부
+     */
+    @Column(name = "use_at", nullable = false)
+    private boolean useAt;
 }

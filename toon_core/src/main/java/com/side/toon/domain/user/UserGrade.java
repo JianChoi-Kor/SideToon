@@ -1,7 +1,7 @@
 package com.side.toon.domain.user;
 
-import com.side.toon.v1.lib.enums.EnumMapperType;
-import com.side.toon.v1.lib.enums.LegacyCodeConverter;
+import com.side.toon.lib.enums.EnumMapperType;
+import com.side.toon.lib.enums.LegacyCodeConverter;
 import lombok.Getter;
 
 @Getter

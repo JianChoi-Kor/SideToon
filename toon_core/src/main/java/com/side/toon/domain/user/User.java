@@ -1,7 +1,9 @@
 package com.side.toon.domain.user;
 
-import com.side.toon.v1.domain.user.enums.UserGrade;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
@@ -44,6 +46,6 @@ public class User {
      * 회원 상세 정보
      */
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idx", referencedColumnName = "user_idx")
+    @JoinColumn(name = "user_info_idx", referencedColumnName = "idx")
     private UserInfo userInfo;
 }
