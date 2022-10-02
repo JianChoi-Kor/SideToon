@@ -25,12 +25,6 @@ public class UserInfo extends CreateDateAndUpdateDate {
     private Long idx;
 
     /**
-     * 사용자
-     */
-    @OneToOne(mappedBy = "userInfo")
-    private User user;
-
-    /**
      * 파일 고유값 (프로필 이미지)
      */
     @Column(name = "profile_img_idx")

@@ -1,6 +1,6 @@
 package com.side.toon.domain.file;
 
-import com.side.toon.v1.lib.entity.CreateDate;
+import com.side.toon.lib.entity.CreateDate;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 

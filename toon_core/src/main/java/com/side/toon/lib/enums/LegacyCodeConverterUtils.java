@@ -13,10 +13,10 @@ public class LegacyCodeConverterUtils {
             return null;
         }
         return EnumSet.allOf(enumClass).stream()
-                .filter(v -> v.getLegacyCode() == legacyCode)
+                .filter(v -> v.getLegacyCode().equals(legacyCode))
                 .findAny()
                 //TODO: Exception 생성 후 처리
-                .orElseThrow(() -> new RuntimeException(String.format("enum=[%s], legacyCode=[%s]가 존재하지 않습니다.", enumClass.getName(), legacyCode)));
+                .orElseThrow(() -> new IllegalArgumentException(String.format("enum=[%s], legacyCode=[%s]가 존재하지 않습니다.", enumClass.getName(), legacyCode)));
     }
 
     public static <T extends Enum<T> & EnumMapperType> Integer toLegacyCode(T enumValue) {
