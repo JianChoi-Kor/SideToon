@@ -18,4 +18,16 @@ public class QnaCategory {
     @Column(name = "idx", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idx;
+
+    /**
+     * 카테고리 이름
+     */
+    @Column(name = "name", nullable = false)
+    private String name;
+
+    /**
+     * 사용 여부(삭제 여부)  false: 삭제  true: 사용
+     */
+    @Column(name = "use_at", nullable = false)
+    private boolean useAt;
 }

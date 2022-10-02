@@ -43,7 +43,7 @@ public class ToonContent extends CreateDateAndUpdateDate {
      * 조회수
      */
     @Column(name = "view")
-    private Long view;
+    private Long view = 0L;
 
     /**
      * 무료 여부
@@ -58,7 +58,7 @@ public class ToonContent extends CreateDateAndUpdateDate {
     private boolean exposure;
 
     /**
-     * 삭제 여부
+     * 사용 여부(삭제 여부)  false: 삭제  true: 사용
      */
     @Column(name = "use_at", nullable = false)
     private boolean useAt;

@@ -61,7 +61,7 @@ public class ToonMain extends CreateDate {
     private boolean exposure;
 
     /**
-     * 삭제 여부
+     * 사용 여부(삭제 여부)  false: 삭제  true: 사용
      */
     @Column(name = "use_at", nullable = false)
     private boolean useAt;

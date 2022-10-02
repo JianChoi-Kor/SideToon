@@ -32,6 +32,9 @@ public class File extends CreateDate {
     @Column(name = "path")
     private String path;
 
-    @Column(name = "use_at")
+    /**
+     * 사용 여부(삭제 여부)  false: 삭제  true: 사용
+     */
+    @Column(name = "use_at", nullable = false)
     private boolean useAt;
 }
