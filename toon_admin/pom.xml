@@ -17,10 +17,21 @@
     </properties>
 
     <dependencies>
+        <!-- toon_core -->
         <dependency>
             <groupId>com.side.toon</groupId>
             <artifactId>toon_core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!-- thymeleaf -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>nz.net.ultraq.thymeleaf</groupId>
+            <artifactId>thymeleaf-layout-dialect</artifactId>
         </dependency>
     </dependencies>
 </project>
