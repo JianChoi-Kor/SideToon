@@ -14,7 +14,7 @@ public class MainController {
     @GetMapping("")
     public ModelAndView main() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("page/main");
+        modelAndView.setViewName("page/index");
         return modelAndView;
     }
 }
