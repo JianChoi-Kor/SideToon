@@ -31,6 +31,12 @@ public class UserInfo extends CreateDateAndUpdateDate {
     private Long profileImgIdx;
 
     /**
+     * 이름
+     */
+    @Column(name = "name")
+    private String name;
+
+    /**
      * 닉네임
      */
     @Column(name = "nickname")

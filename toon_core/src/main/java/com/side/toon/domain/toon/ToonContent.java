@@ -23,7 +23,7 @@ public class ToonContent extends CreateDateAndUpdateDate {
     /**
      * 메인 웹툰
      */
-    @ManyToOne
+    @ManyToOne(targetEntity = ToonMain.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "toon_main_idx", referencedColumnName = "idx")
     private ToonMain toonMain;
 

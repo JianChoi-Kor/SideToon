@@ -50,8 +50,7 @@ public class ToonMain extends CreateDate {
     /**
      * 회차별 웹툰 정보
      */
-    @OneToMany(mappedBy = "toonMain", fetch = FetchType.LAZY)
-    @JoinColumn(name = "toon_main_idx", referencedColumnName = "idx")
+    @OneToMany(mappedBy = "toonMain")
     private List<ToonContent> toonContents;
 
     /**

@@ -32,4 +32,17 @@ public class Admin extends CreateDate {
      */
     @Column(name = "password", nullable = false)
     private String password;
+
+
+    /**
+     * 이름
+     */
+    @Column(name = "name")
+    private String name;
+
+    /**
+     * 이메일
+     */
+    @Column(name = "email")
+    private String email;
 }
